@@ -10,8 +10,5 @@ Import-Module Msonline -Force -Verbose
 #Initiates a connection to Azure Active Directory
 connect-Msolservice
 
-#Get all users including deleted.
-Get-MsolUser -All -ReturnDeletedUsers | select UserPrincipalName,ObjectID
-
-#Permantely delete the user
-Remove-MsolUser -UserPrincipalName "demouseruser@company.com" -Force  -RemoveFromRecycleBin
+#Delete the user
+Remove-MsolUser -UserPrincipalName "demouseruser@company.com" -Force   
