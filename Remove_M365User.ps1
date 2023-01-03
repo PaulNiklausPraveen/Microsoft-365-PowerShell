@@ -10,5 +10,7 @@ Import-Module Msonline -Force -Verbose
 #Initiates a connection to Azure Active Directory
 connect-Msolservice
 
+$UserPrincipalName="demouseruser@company.com"
+
 #Delete the user
-Remove-MsolUser -UserPrincipalName "demouseruser@company.com" -Force   
+Remove-MsolUser -UserPrincipalName  $UserPrincipalName  -Force   
